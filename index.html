@@ -158,18 +158,18 @@
                         name="Quantity"
                         value="100"
                         class="tableInput"
-                        style="width:40%"
+                        style="width:40%;max-width:40px;"
                         disabled="true"
                       />
                       <select
                         class="tableInput"
-                        style="width: 60%;font-size:10px;height: 25px;"
+                        style="width: 60%;font-size:10px;height: 25px; max-width: 60px;"
                         name=""
                         id="input"
                         disabled="true"
                       >
                         <option value="">Kg</option>
-                        <option value="">Litre</option>
+                        <option value="">Liter</option>
                         <option value="">place</option>
                         <option value="">pcs</option>
                       </select>
@@ -203,7 +203,7 @@
                         name="productNumber"
                         value="01"
                         class="tableInput"
-                        disabled
+                        disabled="true"
                       />
                     </td>
                     <td>
@@ -212,17 +212,30 @@
                         name="productName"
                         value="Cotonou-Porto_Novo"
                         class="tableInput"
-                        disabled
+                        disabled="true"
                       />
                     </td>
-                    <td>
+                    <td style="display: flex; position: relative">
                       <input
                         type="text"
                         name="Quantity"
-                        value="100place(s)"
+                        value="100"
                         class="tableInput"
-                        disabled
+                        style="width:40%;max-width:40px;"
+                        disabled="true"
                       />
+                      <select
+                        class="tableInput"
+                        style="width: 60%;font-size:10px;height: 25px; max-width: 60px;"
+                        name=""
+                        id="input"
+                        disabled="true"
+                      >
+                        <option value="">Kg</option>
+                        <option value="">Liter</option>
+                        <option value="">place</option>
+                        <option value="">pcs</option>
+                      </select>
                     </td>
                     <td>
                       <input
@@ -230,7 +243,70 @@
                         name="price"
                         value="5200"
                         class="tableInput"
-                        disabled
+                        disabled="true"
+                      />
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-success editor">
+                        <img src="edit.svg" class="action-icon" alt="" />
+                        <span class="hidden">Edit</span>
+                      </button>
+                      <button type="button" class="btn btn-danger deleter">
+                        <img src="trash.svg" class="action-icon" alt="" />
+                        <span class="hidden">delete</span>
+                      </button>
+                    </td>
+                  </form>
+                </tr>
+                <tr style="height: 52px">
+                  <form action="nobody">
+                    <td class="hidden">
+                      <input
+                        type="number"
+                        name="productNumber"
+                        value="01"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="productName"
+                        value="Cotonou-Porto_Novo"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td style="display: flex; position: relative">
+                      <input
+                        type="text"
+                        name="Quantity"
+                        value="100"
+                        class="tableInput"
+                        style="width:40%;max-width:40px;"
+                        disabled="true"
+                      />
+                      <select
+                        class="tableInput"
+                        style="width: 60%;font-size:10px;height: 25px; max-width: 60px;"
+                        name=""
+                        id="input"
+                        disabled="true"
+                      >
+                        <option value="">Kg</option>
+                        <option value="">Liter</option>
+                        <option value="">place</option>
+                        <option value="">pcs</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="price"
+                        value="5200"
+                        class="tableInput"
+                        disabled="true"
                       />
                     </td>
                     <td>
