@@ -1,0 +1,102 @@
+* {
+  font-family: Quicksand, poppins, lato, ubuntu;
+}
+body {
+  background-color: #e0e4f2;
+}
+body,
+wrapper,
+table {
+  max-width: 100%;
+}
+table{
+  background: rgba(245, 245, 245, 0.4);
+}
+.img-flex {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.logo {
+  display: block;
+  height: 4em;
+  width: 8em;
+  margin: auto;
+}
+input {
+  width: 100%;
+}
+.action-icon {
+  display: inline-block;
+  margin: auto;
+  height: 20px;
+  width: 20px;
+}
+.tableInput {
+  max-width: 150px;
+  margin-top: 0.5em;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em;
+}
+input:disabled,select:disabled {
+  background-color: transparent;
+  overflow: visible;
+  border: none;
+}
+.btn-blue {
+  display: block;
+  margin: auto;
+  min-height: 44px;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: #597aef;
+  color: white;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.btn-round {
+  border-radius: 99px;
+}
+.dash {
+  margin-top: 5em;
+}
+.addProductForm {
+  margin: auto;
+  padding: 16px;
+  background-color: white;
+  border-radius: 12px;
+  width: 85%;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.deleter,
+.editor {
+  height: 32px;
+  margin-left: 0.5em;
+  font-size: 12px;
+  padding: 4px;
+}
+header {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: white;
+}
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .dash {
+    margin-top: 3em;
+  }
+  header {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

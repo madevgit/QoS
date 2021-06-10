@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Add Product page</title>
+  </head>
+  <body>
+    <div class="wrapper row container-fluid">
+      <header class="col-xs-12 col-sm-12 col-md-3">
+        <a href="/" class="logo">
+          <img class="img-flex" src="logo.png" alt="Image" />
+        </a>
+      </header>
+      <section class="dash col-xs-12 col-sm-12 col-md-9">
+        <div class="row btnadd-row">
+          <div class="dropdown" style="display: block; margin: auto">
+            <button
+              class="btn btn-round btn-blue dropdown-toggle"
+              type="button"
+              id="dropdownMenu1"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="true"
+            >
+              <img
+                src="plus.svg"
+                style="display: block; margin: auto; height: 20px; width: 20px"
+                alt=""
+              />
+            </button>
+            <div
+              class="dropdown-menu col-xs-12 col-sm-12 col-md-12 col-lg-12"
+              aria-labelledby="dropdownMenu1"
+              style="
+                background-color: transparent;
+                box-shadow: none;
+                border: none;
+              "
+            >
+              <form class="addProductForm">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Product Name:</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="product name here please"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Price:</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="unit price"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Quantity:</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="Quantity of products"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Measure:</label>
+                  <select name="" id="input" class="form-control">
+                    <option value="">weight(kg)</option>
+                    <option value="">Volume(m<sup>3</sup>)</option>
+                    <option value="">spaces or places</option>
+                    <option value="">piece(pcs)</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-blue">Save</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row table-row" style="margin-top: 52px">
+          <div class="table-responsive">
+            <table class="table">
+              <thead style="background-color: #dae0eb; font-size: 14px">
+                <tr>
+                  <th class="hidden">N°</th>
+                  <th>
+                    Name
+                    <div
+                      style="
+                        font-size: 12px;
+                        color: transparent;
+                        font-weight: bolder;
+                      "
+                    >
+                      (Fcfa)
+                    </div>
+                  </th>
+                  <th>
+                    Quantity
+                    <div style="font-size: 12px; font-weight: bolder">
+                      (Measure)
+                    </div>
+                  </th>
+                  <th>
+                    Price
+                    <div style="font-size: 12px; font-weight: bolder">
+                      (Fcfa)
+                    </div>
+                  </th>
+                  <th>
+                    Actions
+                    <div
+                      style="
+                        font-size: 12px;
+                        color: transparent;
+                        font-weight: bolder;
+                      "
+                    >
+                      (Fcfa)
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="height: 52px">
+                  <form action="nobody">
+                    <td class="hidden">
+                      <input
+                        type="number"
+                        name="productNumber"
+                        value="01"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="productName"
+                        value="Cotonou-Porto_Novo"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td style="display: flex; position: relative">
+                      <input
+                        type="text"
+                        name="Quantity"
+                        value="100"
+                        class="tableInput"
+                        style="width: 50%"
+                        disabled="true"
+                      />
+                      <select
+                        class="tableInput"
+                        style="width: 50%"
+                        name=""
+                        id="input"
+                        disabled="true"
+                      >
+                        <option value="">weight(kg)</option>
+                        <option value="">Volume(m<sup>3</sup>)</option>
+                        <option value="">spaces or places</option>
+                        <option value="">piece(pcs)</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="price"
+                        value="5200"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-success editor">
+                        <img src="edit.svg" class="action-icon" alt="" />
+                        <span class="hidden">Edit</span>
+                      </button>
+                      <button type="button" class="btn btn-danger deleter">
+                        <img src="trash.svg" class="action-icon" alt="" />
+                        <span class="hidden">delete</span>
+                      </button>
+                    </td>
+                  </form>
+                </tr>
+                <tr style="height: 52px">
+                  <form action="nobody">
+                    <td class="hidden">
+                      <input
+                        type="number"
+                        name="productNumber"
+                        value="01"
+                        class="tableInput"
+                        disabled
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="productName"
+                        value="Cotonou-Porto_Novo"
+                        class="tableInput"
+                        disabled
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="Quantity"
+                        value="100place(s)"
+                        class="tableInput"
+                        disabled
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="price"
+                        value="5200"
+                        class="tableInput"
+                        disabled
+                      />
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-success editor">
+                        <img src="edit.svg" class="action-icon" alt="" />
+                        <span class="hidden">Edit</span>
+                      </button>
+                      <button type="button" class="btn btn-danger deleter">
+                        <img src="trash.svg" class="action-icon" alt="" />
+                        <span class="hidden">delete</span>
+                      </button>
+                    </td>
+                  </form>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const editors = document.querySelectorAll(".editor");
+      const forms = document.querySelectorAll("tbody>tr>form");
+      editors.forEach((editor, index) => {
+        editor.addEventListener("click", function () {
+          let prec = $(forms[index].elements).prop("disabled");
+          console.log(forms[index].elements);
+          for (let i = 0; i < forms[index].elements.length; i++) {
+            if (
+              forms[index].elements[i].nodeName === "INPUT" ||
+              forms[index].elements[i].nodeName === "SELECT"
+            ) {
+              $(forms[index].elements[i]).prop("disabled", !prec);
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

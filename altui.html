@@ -1,0 +1,243 @@
+<div class="container-fluid">
+  <div class="row">
+    <div
+      class="col-xs-12 col-sm-3 min-h-full col-md-3 col-lg-3"
+      style="background-color: #f2f2f2; padding-top: 40px"
+    >
+      <a
+        href="/"
+        style="display: block; margin: auto; height: 4em; width: 6em"
+      >
+        <img
+          src="logo.png"
+          style="display: block; width: 100%; height: auto"
+          alt="Image"
+        />
+      </a>
+    </div>
+    <div
+      class="col-xs-12 col-sm-9 col-md-9 col-lg-9"
+      style="padding-top: 40px"
+    >
+      <div class="row">
+        <div class="dropdown" style="display: block; margin: auto">
+          <button
+            class="btn dropdown-toggle"
+            type="button"
+            id="dropdownMenu1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="true"
+            style="
+              display: block;
+              margin: auto;
+              border-radius: 99px;
+              height: 44px;
+              font-size: 16px;
+              line-height: 18px;
+              background-color: #597aef;
+              box-shadow: 0px 4px 4px 0px #00000040; ;
+            "
+          >
+            <img
+              src="plus.svg"
+              style="
+                display: block;
+                margin: auto;
+                height: 20px;
+                width: 20px;
+              "
+              alt=""
+            />
+          </button>
+          <ul
+            class="dropdown-menu col-xs-11 col-sm-12 col-md-12 col-lg-12"
+            aria-labelledby="dropdownMenu1"
+            style="
+              margin:auto;
+              padding: 12px;
+              background-color: #dae0eb;
+              border-radius: 12px;
+            "
+          >
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Product Name</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  placeholder="product name here please"
+                  style="
+                    background-color: #f2f2f2;
+                    border: 1px solid whitesmoke;
+                    height: 2.5em;
+                    border-radius: 4px;
+                  "
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Price</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="unit price"
+                  style="
+                    background-color: #f2f2f2;
+                    border: 1px solid whitesmoke;
+                    height: 2.5em;
+                    border-radius: 4px;
+                  "
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Quantity</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Quantity of products"
+                  style="
+                    background-color: #f2f2f2;
+                    border: 1px solid whitesmoke;
+                    height: 2.5em;
+                    border-radius: 4px;
+                  "
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+          </ul>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 52px">
+        <div class="table-responsive col-xs-12 col-sm-12">
+          <table class="table table-hover">
+            <thead style="background-color: #dae0eb; font-size: 14px">
+              <tr>
+                <th class="hidden">N°</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>
+                  Price
+                  <sup style="font-size: 8px; font-weight: bolder"
+                    >(Fcfa)</sup
+                  >
+                </th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="height: 52px">
+                <form action="">
+                  <td class="hidden">
+                    <input
+                      type="number"
+                      name="productNumber"
+                      value="01"
+                      style="
+                        max-width: 150px;
+                        margin-top: 0.5em;
+                        border: none;
+                        border-radius: 4px;
+                        padding: 0.5em;
+                      "
+                      disabled
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="productName"
+                      value="Cotonou-Porto_Novo"
+                      style="
+                        min-width: 100px;
+                        margin-top: 0.5em;
+                        border: none;
+                        border-radius: 4px;
+                        padding: 0.5em;
+                      "
+                      disabled
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      name="Quantity"
+                      value="100"
+                      style="
+                        max-width: 150px;
+                        margin-top: 0.5em;
+                        border: none;
+                        border-radius: 4px;
+                        padding: 0.5em;
+                      "
+                      disabled
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      name="price"
+                      value="5200"
+                      style="
+                        max-width: 150px;
+                        margin-top: 0.5em;
+                        border: none;
+                        border-radius: 4px;
+                        padding: 0.5em;
+                      "
+                      disabled
+                    />
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-success editor"
+                      style="height: 32px; font-size: 12px; padding: 4px"
+                    >
+                      <img
+                        src="edit.svg"
+                        style="
+                          display: inline-block;
+                          margin: auto;
+                          height: 20px;
+                          width: 20px;
+                        "
+                        alt=""
+                      />
+                      <span class="hidden">Edit</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-danger deleter"
+                      style="
+                        height: 32px;
+                        margin-left: 0.5em;
+                        font-size: 12px;
+                        padding: 4px;
+                      "
+                    >
+                      <img
+                        src="trash.svg"
+                        style="
+                          display: inline-block;
+                          height: 20px;
+                          width: 20px;
+                          margin: auto;
+                        "
+                        alt=""
+                      />
+                      <span class="hidden">delete</span>
+                    </button>
+                  </td>
+                </form>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
