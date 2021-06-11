@@ -21,7 +21,7 @@
           <img class="img-flex" src="logo.png" alt="Image" />
         </a>
       </header>
-      <section class="dash col-xs-12 col-sm-12 col-md-9">
+      <section class="dash col-xs-12 col-sm-12 col-md-9" style="overflow-y:scroll;max-height: 100vh;">
         <div class="row btnadd-row">
           <div class="dropdown" style="display: block; margin: auto">
             <button
@@ -47,11 +47,12 @@
                 border: none;
               "
             >
-              <form class="addProductForm">
+              <form action="" class="addProductForm">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Product Name:</label>
                   <input
-                    type="email"
+                    type="text"
+                    name="name"
                     class="form-control"
                     placeholder="product name here please"
                   />
@@ -59,27 +60,28 @@
                 <div class="form-group">
                   <label for="exampleInputPassword1">Price:</label>
                   <input
-                    type="password"
+                    type="number"
                     class="form-control"
                     placeholder="unit price"
+                    name="price"
                   />
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Quantity:</label>
+                  <label>Quantity:</label>
                   <input
-                    type="password"
+                    type="number"
+                    name="quantity"
                     class="form-control"
-                    id="exampleInputPassword1"
                     placeholder="Quantity of products"
                   />
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Measure:</label>
-                  <select name="" id="input" class="form-control">
-                    <option value="">weight(kg)</option>
-                    <option value="">Volume(m<sup>3</sup>)</option>
-                    <option value="">spaces or places</option>
-                    <option value="">piece(pcs)</option>
+                  <select name=measure"" id="input" class="form-control">
+                    <option value="Kg">weight(kg)</option>
+                    <option value="Liter">Volume(Liter)</option>
+                    <option value="place">spaces or places</option>
+                    <option value="pcs">piece(pcs)</option>
                   </select>
                 </div>
                 <button type="submit" class="btn btn-blue">Save</button>
@@ -87,8 +89,8 @@
             </div>
           </div>
         </div>
-        <div class="row table-row" style="margin-top: 52px">
-          <div class="table-responsive">
+        <div class="row table-row" style="margin-top: 52px;">
+          <div class="table-responsive col-md-12" style="margin: auto;">
             <table class="table">
               <thead style="background-color: #dae0eb; font-size: 14px">
                 <tr>
@@ -146,7 +148,7 @@
                     <td>
                       <input
                         type="text"
-                        name="productName"
+                        name="name"
                         value="Cotonou-Porto_Novo"
                         class="tableInput"
                         disabled="true"
@@ -155,23 +157,21 @@
                     <td style="display: flex; position: relative">
                       <input
                         type="text"
-                        name="Quantity"
+                        name="quantity"
                         value="100"
                         class="tableInput"
-                        style="width:40%;max-width:40px;"
                         disabled="true"
                       />
                       <select
-                        class="tableInput"
-                        style="width: 60%;font-size:10px;height: 25px; max-width: 60px;"
-                        name=""
+                        class="tableInput measure"
+                        name="measure"
                         id="input"
                         disabled="true"
                       >
-                        <option value="">Kg</option>
-                        <option value="">Liter</option>
-                        <option value="">place</option>
-                        <option value="">pcs</option>
+                        <option value="Kg">Kg</option>
+                        <option value="Liter">Liter</option>
+                        <option selected value="Place">place</option>
+                        <option value="pcs">pièce(pcs)</option>
                       </select>
                     </td>
                     <td>
@@ -209,8 +209,8 @@
                     <td>
                       <input
                         type="text"
-                        name="productName"
-                        value="Cotonou-Porto_Novo"
+                        name="name"
+                        value="Palm Oil"
                         class="tableInput"
                         disabled="true"
                       />
@@ -218,23 +218,82 @@
                     <td style="display: flex; position: relative">
                       <input
                         type="text"
-                        name="Quantity"
+                        name="quantity"
                         value="100"
                         class="tableInput"
-                        style="width:40%;max-width:40px;"
                         disabled="true"
                       />
                       <select
-                        class="tableInput"
-                        style="width: 60%;font-size:10px;height: 25px; max-width: 60px;"
-                        name=""
+                        class="tableInput measure"
+                        name="measure"
                         id="input"
                         disabled="true"
                       >
-                        <option value="">Kg</option>
-                        <option value="">Liter</option>
-                        <option value="">place</option>
-                        <option value="">pcs</option>
+                        <option value="Kg">Kg</option>
+                        <option selected value="Liter">Liter</option>
+                        <option value="Place">place</option>
+                        <option value="pcs">pièce(pcs)</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="price"
+                        value="1000"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-success editor">
+                        <img src="edit.svg" class="action-icon" alt="" />
+                        <span class="hidden">Edit</span>
+                      </button>
+                      <button type="button" class="btn btn-danger deleter">
+                        <img src="trash.svg" class="action-icon" alt="" />
+                        <span class="hidden">delete</span>
+                      </button>
+                    </td>
+                  </form>
+                </tr>
+                <tr style="height: 52px">
+                  <form action="nobody">
+                    <td class="hidden">
+                      <input
+                        type="number"
+                        name="productNumber"
+                        value="01"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="name"
+                        value="Rice"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td style="display: flex; position: relative">
+                      <input
+                        type="text"
+                        name="quantity"
+                        value="200"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                      <select
+                        class="tableInput measure"
+                        name="measure"
+                        id="input"
+                        disabled="true"
+                      >
+                        <option selected value="Kg">Kg</option>
+                        <option value="Liter">Liter</option>
+                        <option value="Place">place</option>
+                        <option value="pcs">pièce(pcs)</option>
                       </select>
                     </td>
                     <td>
@@ -272,7 +331,68 @@
                     <td>
                       <input
                         type="text"
-                        name="productName"
+                        name="name"
+                        value="Shoes Adidas X-treme"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td style="display: flex; position: relative">
+                      <input
+                        type="text"
+                        name="quantity"
+                        value="800"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                      <select
+                        class="tableInput measure"
+                        name="measure"
+                        id="input"
+                        disabled="true"
+                      >
+                        <option value="Kg">Kg</option>
+                        <option value="Liter">Liter</option>
+                        <option value="Place">place</option>
+                        <option selected value="pcs">piece</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="price"
+                        value="15000"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-success editor">
+                        <img src="edit.svg" class="action-icon" alt="" />
+                        <span class="hidden">Edit</span>
+                      </button>
+                      <button type="button" class="btn btn-danger deleter">
+                        <img src="trash.svg" class="action-icon" alt="" />
+                        <span class="hidden">delete</span>
+                      </button>
+                    </td>
+                  </form>
+                </tr>
+                <tr style="height: 52px">
+                  <form action="nobody">
+                    <td class="hidden">
+                      <input
+                        type="number"
+                        name="productNumber"
+                        value="01"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="name"
                         value="Cotonou-Porto_Novo"
                         class="tableInput"
                         disabled="true"
@@ -281,23 +401,21 @@
                     <td style="display: flex; position: relative">
                       <input
                         type="text"
-                        name="Quantity"
+                        name="quantity"
                         value="100"
                         class="tableInput"
-                        style="width:40%;max-width:40px;"
                         disabled="true"
                       />
                       <select
-                        class="tableInput"
-                        style="width: 60%;font-size:10px;height: 25px; max-width: 60px;"
-                        name=""
+                        class="tableInput measure"
+                        name="measure"
                         id="input"
                         disabled="true"
                       >
-                        <option value="">Kg</option>
-                        <option value="">Liter</option>
-                        <option value="">place</option>
-                        <option value="">pcs</option>
+                        <option value="Kg">Kg</option>
+                        <option value="Liter">Liter</option>
+                        <option selected value="Place">place</option>
+                        <option value="pcs">pièce(pcs)</option>
                       </select>
                     </td>
                     <td>
@@ -320,7 +438,7 @@
                       </button>
                     </td>
                   </form>
-                </tr>
+                </tr>                
               </tbody>
             </table>
           </div>
@@ -335,12 +453,104 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      const data=[
+        {
+          name:'Cotonou-Porto_Novo',
+          quantity:100,
+          measure:'kg',
+          prix:5200
+        },
+        {
+          name:'Rice',
+          quantity:100,
+          measure:'kg',
+          price:5200
+        },
+        {
+          name:'Palm Oil',
+          quantity:100,
+          measure:'liter',
+          pice:5200
+        }
+      ]
+      const addProductForm= document.querySelector('.addProductForm')
+      addProductForm.addEventListener('submit',function(e){
+        e.preventDefault()
+        let newData= new FormData(this)
+        let newProduct= {
+          name:newData.get('name'),
+          quantity:newData.get('quantity'),
+          measure:newData.get('measure'),
+          price:newData.get('price')
+        }
+        $('tbody').append(`
+        <tr style="height: 52px">
+                  <form action="nobody">
+                    <td class="hidden">
+                      <input
+                        type="number"
+                        name="productNumber"
+                        value="01"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name=${newProduct.name}
+                        value="Cotonou-Porto_Novo"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td style="display: flex; position: relative">
+                      <input
+                        type="text"
+                        name="quantity"
+                        value="${newProduct.quantity}"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                      <select
+                        class="tableInput measure"
+                        name="measure"
+                        id="input"
+                        disabled="true"
+                      >
+                        <option value="Kg">Kg</option>
+                        <option value="Liter">Liter</option>
+                        <option value="Place">place</option>
+                        <option value="pcs">pièce(pcs)</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="price"
+                        value="${newProduct.price}"
+                        class="tableInput"
+                        disabled="true"
+                      />
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-success editor">
+                        <img src="edit.svg" class="action-icon" alt="" />
+                        <span class="hidden">Edit</span>
+                      </button>
+                      <button type="button" class="btn btn-danger deleter">
+                        <img src="trash.svg" class="action-icon" alt="" />
+                        <span class="hidden">delete</span>
+                      </button>
+                    </td>
+                  </form>
+                </tr>`)        
+      })
       const editors = document.querySelectorAll(".editor");
       const forms = document.querySelectorAll("tbody>tr>form");
       editors.forEach((editor, index) => {
         editor.addEventListener("click", function () {
           let prec = $(forms[index].elements).prop("disabled");
-          console.log(forms[index].elements);
           for (let i = 0; i < forms[index].elements.length; i++) {
             if (
               forms[index].elements[i].nodeName === "INPUT" ||
@@ -348,6 +558,11 @@
             ) {
               $(forms[index].elements[i]).prop("disabled", !prec);
             }
+          }
+          if(prec){
+            this.firstElementChild.src="check.svg"
+          }else{
+            this.firstElementChild.src="edit.svg"
           }
         });
       });

@@ -12,6 +12,9 @@ table {
 table {
   background: rgba(245, 245, 245, 0.4);
 }
+tr {
+  overflow: hidden;
+}
 .img-flex {
   display: block;
   height: auto;
@@ -59,7 +62,7 @@ select:disabled {
   border-radius: 99px;
 }
 .dash {
-  margin-top: 5em;
+  padding-top: 4em;
 }
 .addProductForm {
   margin: auto;
@@ -77,10 +80,15 @@ select:disabled {
   padding: 4px;
 }
 .measure {
-  width: 60%;
+  position: absolute;
+  background-color: white;
+  border:2px solid rgba(245, 245, 245);
+  top: -2px;
+  left: 45%;
   font-size: 10px;
   height: 25px;
-  max-width: 80px;
+  max-width: 60px;
+  overflow: visible;
 }
 header {
   padding-top: 2em;
@@ -88,7 +96,9 @@ header {
   background-color: white;
 }
 @media (min-width: 576px) {
-
+  .measure {
+    left: 20%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -96,7 +106,7 @@ header {
 
 @media (min-width: 992px) {
   .dash {
-    margin-top: 3em;
+    margin-top: 0em;
   }
   header {
     height: 100vh;
